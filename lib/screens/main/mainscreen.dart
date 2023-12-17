@@ -35,8 +35,13 @@ class MainScreen extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               if(Responsive.isDesktop(context))
-              Expanded(
-                flex: 7,
+                const Expanded(
+                  flex:2 ,
+                  child: SideMenu(),
+                ),
+                const SizedBox(width: defaultPadding),
+                Expanded(
+                  flex: 7,
                 child: SingleChildScrollView(
                   child: Column(
                     children: [

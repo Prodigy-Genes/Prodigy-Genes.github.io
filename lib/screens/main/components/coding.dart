@@ -41,10 +41,7 @@ class Coding extends StatelessWidget {
           percentage: 0.58,
           label: "JavaScript",
         ),
-        const AnimatedLinearProgressIndicator(
-          percentage: 0.58,
-          label: "SQL",
-        ),
+      
         const AnimatedLinearProgressIndicator(
           percentage: 0.50,
           label: "Java",

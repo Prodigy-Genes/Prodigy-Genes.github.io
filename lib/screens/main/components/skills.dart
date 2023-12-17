@@ -27,7 +27,7 @@ class Skills extends StatelessWidget {
               child: AnimatedCircularProgressIndicator(
                 percentage: 0.8,
                 label: "Flutter",
-              ),
+              )
             ),
             SizedBox(width: defaultPadding),
             Expanded(
@@ -40,7 +40,7 @@ class Skills extends StatelessWidget {
             Expanded(
               child: AnimatedCircularProgressIndicator(
                 percentage: 0.65,
-                label: "Firebase",
+                label: "Photoshop",
               ),
             ),
           ],

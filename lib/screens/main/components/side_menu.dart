@@ -1,6 +1,9 @@
+// ignore_for_file: unrelated_type_equality_checks, avoid_print, deprecated_member_use
+
 import 'package:flutter/material.dart';
 import 'package:portfolio_site/constants.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 import 'area_info.dart';
 import 'coding.dart';
@@ -12,6 +15,19 @@ class SideMenu extends StatelessWidget {
   const SideMenu({
     super.key,
   });
+
+  // Function to launch a URL
+  void _launchURL(String url) async {
+    try {
+      if (await canLaunch(url)) {
+        await launch(url);
+      } else {
+        throw 'Could not launch $url';
+      }
+    } catch (e) {
+      print('Error launching URL: $e');
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -27,15 +43,15 @@ class SideMenu extends StatelessWidget {
                   children: [
                     const AreaInfoText(
                       title: "Residence",
-                      text: "Bangladesg",
+                      text: "Koforidua, Tafo",
                     ),
                     const AreaInfoText(
-                      title: "City",
-                      text: "Dhaka",
+                      title: "Date of Birth",
+                      text: "03/05/2003",
                     ),
                     const AreaInfoText(
-                      title: "Age",
-                      text: "22",
+                      title: "Email",
+                      text: "bulletoze@gmail.com",
                     ),
                     const Skills(),
                     const SizedBox(height: defaultPadding),
@@ -70,15 +86,21 @@ class SideMenu extends StatelessWidget {
                         children: [
                           const Spacer(),
                           IconButton(
-                            onPressed: () {},
+                            onPressed: () {
+                              _launchURL("https://www.linkedin.com/in/joseph-osei-aboagye");
+                            },
                             icon: SvgPicture.asset("assets/icons/linkedin.svg"),
                           ),
                           IconButton(
-                            onPressed: () {},
+                            onPressed: () {
+                              _launchURL("https://github.com/Prodigy-Genes");
+                            },
                             icon: SvgPicture.asset("assets/icons/github.svg"),
                           ),
                           IconButton(
-                            onPressed: () {},
+                            onPressed: () {
+                              _launchURL("https://twitter.com/ProdigyGenes");
+                            },
                             icon: SvgPicture.asset("assets/icons/twitter.svg"),
                           ),
                           const Spacer(),

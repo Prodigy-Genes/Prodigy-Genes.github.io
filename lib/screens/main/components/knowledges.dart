@@ -18,14 +18,18 @@ class Knowledges extends StatelessWidget {
           padding: const EdgeInsets.symmetric(
               vertical: defaultPadding),
           child: Text(
-            "Knowledges",
+            "Knowledge",
             style: Theme.of(context).textTheme.titleSmall,
           ),
         ),
-        const KnowledgeText(text: "Flutter, Dart"),
-        const KnowledgeText(text: "Adobe PhotoShop, Wordpress"),
-        const KnowledgeText(text: "React Native, Typescript"),
+        const KnowledgeText(text: "Blender"),
+        const KnowledgeText(text: "Adobe PhotoShop"),
+        const KnowledgeText(text: "Figma"),
         const KnowledgeText(text: "GIT Knowledge"),
+        const KnowledgeText(text: "Wordpress"),
+        const KnowledgeText(text: "Art / 2d Animations"),
+        const KnowledgeText(text: "Filmora")
+        
       ],
     );
   }
