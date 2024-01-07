@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio_site/screens/home/home_screen.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import 'package:portfolio_site/constants.dart';
+import 'package:portfolio_site/splashscreen.dart';
 void main() {
   runApp(const MyPortfolio_Site());
 }
@@ -28,7 +28,7 @@ class MyPortfolio_Site extends StatelessWidget {
               bodyMedium: const TextStyle(color: bodyTextColor),
             ),
       ),
-      home: const HomeScreen(),
+      home: const MySplashScreen(),
     );
   }
 }

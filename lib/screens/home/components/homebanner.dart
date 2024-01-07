@@ -1,6 +1,9 @@
+// ignore_for_file: unused_element, deprecated_member_use, avoid_print
+
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
 import 'package:portfolio_site/responsive.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 import 'package:portfolio_site/constants.dart';
 
@@ -8,6 +11,19 @@ class HomeBanner extends StatelessWidget {
   const HomeBanner({
     super.key,
   });
+
+  void _launchURL(String url) async {
+    try {
+      if (await canLaunch(url)) {
+        await launch(url);
+      } else {
+        throw 'Could not launch $url';
+      }
+    } catch (e) {
+      print('Error launching URL: $e');
+    }
+  }
+
 
   @override
   Widget build(BuildContext context) {
@@ -46,7 +62,7 @@ class HomeBanner extends StatelessWidget {
                 if (!Responsive.isMobileLarge(context))
                   ElevatedButton(
                     onPressed: () {
-                      
+                      _launchURL("https://github.com/Prodigy-Genes");
                     },
                     style: TextButton.styleFrom(
                       padding: const EdgeInsets.symmetric(

@@ -60,7 +60,9 @@ class SideMenu extends StatelessWidget {
                     const Divider(),
                     const SizedBox(height: defaultPadding / 2),
                     TextButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        _launchURL("https://docs.google.com/document/d/1jr0wZwNGDU1vYum7VgdeuMICAFDzHtl3nkEXbySJlFA/edit?usp=sharing");
+                      },
                       child: FittedBox(
                         child: Row(
                           children: [

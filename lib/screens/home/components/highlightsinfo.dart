@@ -17,28 +17,10 @@ class HighLightInfo extends StatelessWidget {
       child: Responsive.isMobileLarge(context)
           ? const Column(
               children: [
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Highlight(
-                      counter: AnimatedCounter(
-                      value: 119,
-                      text: "K+"
-                    ),
-                    label: "Subscribers",
-                    ),
-                    Highlight(
-                      counter: AnimatedCounter(
-                      value: 40,
-                      text: "+"
-                    ),
-                    label: "Videos",
-                    ),
-                  ],
-                ),
+                
                 SizedBox(height: defaultPadding,),
                 Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
                     Highlight(
                       counter: AnimatedCounter(
@@ -49,8 +31,8 @@ class HighLightInfo extends StatelessWidget {
                     ),
                     Highlight(
                       counter: AnimatedCounter(
-                      value: 13,
-                      text: "K+"
+                      value: 50,
+                      text: "+"
                     ),
                     label: "Stars"
                     )
@@ -59,22 +41,9 @@ class HighLightInfo extends StatelessWidget {
               ],
           )
           : const Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              Highlight(
-                  counter: AnimatedCounter(
-                    value: 119,
-                    text: "K+",
-                  ),
-                  label: "Subscribers"
-              ),
-              Highlight(
-                  counter: AnimatedCounter(
-                    value: 40,
-                    text: "+",
-                  ),
-                  label: "Videos"
-              ),
+              
               Highlight(
                   counter: AnimatedCounter(
                     value: 30,
@@ -84,8 +53,8 @@ class HighLightInfo extends StatelessWidget {
               ),
               Highlight(
                   counter: AnimatedCounter(
-                    value: 13,
-                    text: "K+",
+                    value: 50,
+                    text: "+",
                   ),
                   label: "Stars"
               ),
