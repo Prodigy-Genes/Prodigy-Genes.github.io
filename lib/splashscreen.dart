@@ -50,7 +50,7 @@ class _MySplashScreenState extends State<MySplashScreen> {
           children: [
             // Add your GIF here using the FlutterSvg widget
             Image.asset(
-              'assets/images/vid.gif', // Replace with the path to your GIF
+              'assets/images/vid.gif', 
               height: 500,
               width: 500,
             ),
