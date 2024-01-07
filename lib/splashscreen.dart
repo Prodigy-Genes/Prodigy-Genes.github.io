@@ -1,7 +1,6 @@
 // ignore_for_file: library_private_types_in_public_api, use_build_context_synchronously, avoid_print
 
 import 'package:flutter/material.dart';
-//import 'package:flutter_svg/flutter_svg.dart';
 import 'package:portfolio_site/screens/home/home_screen.dart';
 
 class MySplashScreen extends StatefulWidget {
@@ -19,7 +18,6 @@ class _MySplashScreenState extends State<MySplashScreen> {
     super.initState();
     // Store the context
     _context = context;
-    // You can add any initialization logic here
     _navigateToHome();
   }
 
